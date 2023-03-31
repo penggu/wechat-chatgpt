@@ -81,6 +81,7 @@ export class ChatGPTBot {
     messages.push(message);
     for (const msg of messages) {
       await talker.say(msg);
+      console.log(`🤖 Reply From ChatGPT: ${msg}`);
     }
   }
   // Check whether the ChatGPT processing can be triggered

@@ -22,7 +22,10 @@ const sendMessage = async (message: string) => {
       }),
     });
     return response.json()
-      .then((data) => data.choices[0].message.content);
+        .then((data) => {
+            console.log('Message Object:', data);
+            return data.choices[0].message.content;
+        });
   } catch (e) {
     console.error(e)
     return "Something went wrong"
